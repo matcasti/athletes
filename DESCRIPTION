@@ -15,3 +15,5 @@ Depends:
 LazyData: true
 Imports: 
     data.table
+URL: https://github.com/matcasti/athletes
+BugReports: https://github.com/matcasti/athletes/issues
