@@ -8,6 +8,14 @@
 \description{
 Tools and analyses from the IND athletes dataset.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/matcasti/athletes}
+  \item Report bugs at \url{https://github.com/matcasti/athletes/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Matías Castillo-Aguilar \email{matcasti@umag.cl} (\href{https://orcid.org/0000-0001-7291-247X}{ORCID})
 

@@ -25,30 +25,30 @@ The goal of `athletes` is to provide the tools and data used for the IND athlete
 You can install the development version of athletes like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("remotes")
+remotes::install_github("matcasti/athletes")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to call the dataset:
 
 ```{r example}
 library(athletes)
-## basic example code
+
+head(ind[, 1:8]) # First six observations from the first eight columns
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+Lets check the mean values of key HRV metrics for each time point:
 
 ```{r cars}
-summary(cars)
+ind[, lapply(.SD, mean), .SDcols = 5:8, keyby = time]
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+You can also plot the data using the classic base-r system:
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
+```{r ind, echo = FALSE}
+plot(ind[, 3:8])
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+
